@@ -1,0 +1,7 @@
+Servlet请求转发和请求重定向的区别:
+请求转发:request.getRequestDispatcher("目的地"),forward(request,response);
+(页面一次请求和这一次请求是同一个请求)整个过程只发生了一次请求;
+forward携带数据是用request.setAttribute("名字",任意类型的数据)
+到达目的地,可以通过request.getAttribute("名字")取出数据
+请求重定向:response.sendRedirect("目的地"),
+(页面一次请求和这一次请求不是同一个请求)整个过程发生2次请求
