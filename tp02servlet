@@ -5,3 +5,11 @@ forward携带数据是用request.setAttribute("名字",任意类型的数据)
 到达目的地,可以通过request.getAttribute("名字")取出数据
 请求重定向:response.sendRedirect("目的地"),
 (页面一次请求和这一次请求不是同一个请求)整个过程发生2次请求
+解决中文乱码
+请求
+1.针对post请求 在使用request对象之前加request.setCharcterEncodind("utf-8");
+针对get请求,tomcat6和7版本默认字符集ISO-8859-1
+所以在之类版本中处理配置文件server.xml,端口号后面加上URIEcodind="utf-8"
+响应
+1.页面从后台等到的数据是乱码
+在使用response对象之前 response.setCharcterEncodind("utf-8");
