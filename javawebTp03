@@ -1,0 +1,10 @@
+session
+1.客户端访问服务端的一次会话,第一次向后台请求session就创建了,也就是开启了会话
+2.当会话失效或浏览器关闭,会话结束,session就没有了
+3.会话失效的2种方式:设置会话的有效时间,Invalidate()方法
+4.设置会话的有效时间有三种:
+4.1登录成功之后调用方法:setMaxInactiveInterval(秒) 
+4.2.web.xml中设置或tomcat中配置文件context.xml中设置以下代码
+<session-config>
+        <session-timeout>时间(分)</session-timeout>
+    </session-config>
